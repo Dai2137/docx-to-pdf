@@ -1,8 +1,13 @@
 # docxファイルをpdf化し、結合して一つのpdfにするやつ
 
+```
+python3 --version
+> Python 3.10.4
+```
+
 1. `./data/{適当な名前}/`に一括ダウンロードしたフォルダ（解凍済み）を配置
 2.  ```
-    python -m venv ./.venv
+    python3 -m venv ./.venv
     source .venv/bin/activate
     pip3 install -r requirements.txt
     python3 main.py -i ./data/{適当な名前}/
