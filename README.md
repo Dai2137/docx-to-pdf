@@ -31,3 +31,9 @@ options:
   -d, --delete-tmp-files
                         中間ファイルを削除するかどうか
 ```
+
+## デモ
+
+```
+python3 main.py -i ./demo/
+```
