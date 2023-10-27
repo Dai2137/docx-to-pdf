@@ -1,14 +1,15 @@
 # docxファイルをpdf化し、結合して一つのpdfにするやつ
 
 1. `./data/{適当な名前}/`に一括ダウンロードしたフォルダ（解凍済み）を配置
-2.  ```
-    python -m venv ./.venv
-    source .venv/bin/activate
-    pip3 install -r requirements.txt
-    python3 main.py -i ./data/{適当な名前}/
+2.
+```
+python -m venv ./.venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
+python3 main.py -i ./data/{適当な名前}/
 
-    （途中でアクセス許可が求められることがある）
-    ```
+（途中でアクセス許可が求められることがある）
+```
 3. `./out.pdf`が作成される
 
 ```

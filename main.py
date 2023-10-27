@@ -3,8 +3,8 @@ import glob
 import os
 import shutil
 
+import docx2pdf
 import pypdf
-from docx2pdf import convert
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -43,7 +43,7 @@ if __name__ == "__main__":
         shutil.copy(word_file, f"{word_files_dir}/{joined_word_file}")
 
     print("Converting docx files to pdf...")
-    convert(word_files_dir, output_path=pdf_files_dir, keep_active=True)
+    docx2pdf.convert(word_files_dir, output_path=pdf_files_dir, keep_active=True)
 
     merger = pypdf.PdfMerger()
     for pdf_file in sorted(glob.glob(f"{pdf_files_dir}/*.pdf")):
