@@ -1,4 +1,4 @@
 .venv
 data
-out.pdf
 demo/tmp/
+*.pdf
