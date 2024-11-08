@@ -6,19 +6,19 @@ Python 3.10.4
 ```
 
 1. `./data/{適当な名前}/`に一括ダウンロードしたフォルダ（解凍済み）を配置
-2. 以下をターミナルで実行
+2. 以下をターミナルで実行（途中でアクセス許可が求められることがある）
     ```
-    python -m venv ./.venv
+    python -m venv .venv
     source .venv/bin/activate
-    pip3 install -r requirements.txt
-    python3 main.py -i ./data/{適当な名前}/
-
-    （途中でアクセス許可が求められることがある）
+    pip install -r requirements.txt
+    python main.py -i ./data/{適当な名前}/
     ```
 3. `./out.pdf`が作成される
 
+## 設定
+
 ```
-python3 main.py -h
+python main.py -h
 
 usage: main.py [-h] -i INPUT_DIR [-o OUTPUT_DIR] [-d]
 
@@ -35,5 +35,19 @@ options:
 ## デモ
 
 ```
-python3 main.py -i ./demo/
+python main.py -i ./demo/
 ```
+
+## 不具合メモ
+
+- zipファイルが解凍できない場合
+- 以下のコマンドを実行すると治るかも
+
+```
+# a.zipが壊れている場合
+zip -FF a.zip --out a-fixed.zip
+unzip -O CP932 a-fixed.zip
+```
+
+- 参考
+  - https://qiita.com/ktateish/items/28b69c18d64d50d6d5b0
