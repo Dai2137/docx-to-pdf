@@ -9,7 +9,7 @@ Python 3.10.4
 2. 以下をターミナルで実行（途中でアクセス許可が求められることがある）
     ```
     python -m venv .venv
-    source .venv/bin/activate
+    source .venv/Scripts/activate
     pip install -r requirements.txt
     python main.py -i ./data/{適当な名前}/
     ```
